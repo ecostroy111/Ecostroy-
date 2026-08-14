@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EcoStroy — ремонт коммерческих помещений под ключ</title>
+<meta name="description" content="EcoStroy — ремонт коммерческих помещений под ключ в Алматы. Магазины, бутики, офисы и коммерческие пространства.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0b0a;--card:#141412;--text:#f4f1e9;--muted:#aaa79f;--line:#292823;--accent:#c9b38a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Manrope,Arial,sans-serif}
+a{color:inherit;text-decoration:none}.wrap{max-width:1180px;margin:auto;padding:0 28px}
+header{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(11,11,10,.72);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.07)}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between}.brand{font-size:22px;letter-spacing:.18em;font-weight:700}.navlinks{display:flex;gap:30px;color:#c7c4bc;font-size:13px}.navbtn{border:1px solid #77705f;padding:11px 17px;border-radius:999px;font-size:13px}
+.hero{min-height:100vh;display:flex;align-items:flex-end;position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.22)),url("images/project-1.jpeg") center/cover}
+.hero:after{content:"";position:absolute;inset:auto 0 0;height:42%;background:linear-gradient(transparent,var(--bg))}
+.hero .wrap{position:relative;z-index:2;padding-top:150px;padding-bottom:100px;width:100%}.eyebrow{color:var(--accent);font-size:12px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:20px}
+h1{font-size:clamp(48px,7vw,92px);line-height:.94;letter-spacing:-.055em;max-width:850px;margin:0 0 28px}h1 span{color:#aaa59a}.lead{font-size:18px;line-height:1.65;color:#d0cdc4;max-width:590px}
+.actions{display:flex;gap:12px;margin-top:35px;flex-wrap:wrap}.btn{padding:15px 22px;border-radius:999px;background:#eee9df;color:#111;font-weight:600;font-size:14px}.btn.alt{background:transparent;color:#eee9df;border:1px solid #69665f}
+section{padding:110px 0}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:48px}.kicker{color:var(--accent);font-size:12px;letter-spacing:.18em;text-transform:uppercase}.title{font-size:clamp(35px,5vw,62px);letter-spacing:-.045em;line-height:1;margin:12px 0 0}.desc{max-width:450px;color:var(--muted);line-height:1.7}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.project{position:relative;overflow:hidden;border-radius:5px;background:var(--card);min-height:360px}.project:nth-child(3n+1){min-height:500px}.project img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s}.project:hover img{transform:scale(1.04)}.project .cap{position:absolute;left:0;right:0;bottom:0;padding:24px;background:linear-gradient(transparent,rgba(0,0,0,.86));font-size:15px}
+.services{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line)}.service{padding:35px 25px 35px 0;border-bottom:1px solid var(--line)}.service h3{font-size:21px;margin:0 0 12px}.service p{color:var(--muted);line-height:1.7;margin:0;max-width:480px}
+.trust{display:flex;flex-wrap:wrap;gap:12px}.pill{border:1px solid var(--line);padding:16px 20px;border-radius:999px;color:#ddd8ce}
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{background:var(--card);padding:28px;min-height:210px;border:1px solid #1e1e1b}.num{color:var(--accent);font-size:12px}.step h3{margin:35px 0 12px}.step p{color:var(--muted);line-height:1.6;font-size:14px}
+.cta{background:#e8e1d4;color:#111;border-radius:7px;padding:70px}.cta .kicker{color:#776b57}.cta h2{font-size:clamp(38px,5vw,66px);letter-spacing:-.05em;line-height:1;margin:12px 0 20px;max-width:760px}.cta p{color:#514c43;max-width:540px;line-height:1.7}.cta .btn{background:#111;color:#fff;margin-top:18px}
+footer{padding:35px 0 100px;color:#77736b;font-size:13px;border-top:1px solid var(--line);margin-top:110px}
+.float{position:fixed;right:20px;bottom:20px;z-index:30;background:#eee9df;color:#111;padding:15px 20px;border-radius:999px;font-weight:700;font-size:13px;box-shadow:0 12px 35px #0008}
+@media(max-width:800px){.navlinks{display:none}.wrap{padding:0 18px}.hero{min-height:92vh}.hero .wrap{padding-bottom:65px}section{padding:75px 0}.section-head{display:block}.desc{margin-top:20px}.grid{grid-template-columns:1fr 1fr}.project,.project:nth-child(3n+1){min-height:260px}.services,.process{grid-template-columns:1fr}.cta{padding:42px 25px}.float{left:18px;right:18px;text-align:center}.nav{height:68px}}
+</style>
+
+<style>
+:root{--bg:#090908;--paper:#eee9df;--muted:#aaa69d;--line:#292824;--gold:#c8b38d;--white:#f7f4ee}
+body{background:var(--bg);color:var(--white)}
+header{background:rgba(8,8,7,.52)!important;backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.08)!important}
+.hero{position:relative;overflow:hidden;background:#090908!important}
+.hero::before{content:"";position:absolute;inset:-30px;background:linear-gradient(90deg,rgba(0,0,0,.84),rgba(0,0,0,.30)),linear-gradient(0deg,rgba(0,0,0,.82),transparent 60%),url('project-1.jpeg') center/cover;filter:blur(3px);transform:scale(1.05);z-index:0}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 25%,rgba(200,179,141,.16),transparent 32%);z-index:1}
+.hero .wrap,.hero .hero-content{position:relative;z-index:2}
+h1{letter-spacing:-.065em!important;font-size:clamp(52px,8vw,104px)!important;line-height:.92!important}
+.eyebrow,.kicker,.eyebrow2{color:var(--gold)!important;letter-spacing:.22em!important}
+.btn{border-radius:999px!important;padding:15px 23px!important}
+.project{border-radius:3px!important;overflow:hidden!important}
+.project img{transition:transform .8s,filter .8s!important;filter:saturate(.88)!important}
+.project:hover img{transform:scale(1.045)!important;filter:saturate(1)!important}
+section{padding-top:120px!important;padding-bottom:120px!important}
+.cta{border-radius:4px!important;background:var(--paper)!important}
+.floating{background:var(--paper)!important;color:#111!important;border-radius:999px!important;box-shadow:0 15px 45px #0009!important}
+</style>
+
+<style>
+.whatsapp-panel{
+  position:fixed;left:50%;bottom:20px;transform:translateX(-50%);
+  z-index:100;width:min(560px,calc(100% - 32px));
+  display:flex;align-items:center;justify-content:space-between;gap:18px;
+  padding:13px 14px 13px 20px;border:1px solid rgba(255,255,255,.14);
+  border-radius:18px;background:rgba(20,20,18,.86);backdrop-filter:blur(22px);
+  box-shadow:0 18px 60px rgba(0,0,0,.45)
+}
+.whatsapp-panel .wa-copy{display:flex;flex-direction:column;gap:3px}
+.whatsapp-panel .wa-title{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#c8b38d}
+.whatsapp-panel .wa-text{font-size:13px;color:#e9e5dc}
+.whatsapp-panel .wa-btn{white-space:nowrap;background:#eee9df;color:#111;padding:12px 18px;border-radius:999px;font-size:12px;font-weight:700}
+@media(max-width:600px){
+ .whatsapp-panel{bottom:12px;padding:11px 11px 11px 16px;border-radius:16px}
+ .whatsapp-panel .wa-text{font-size:12px}
+ .whatsapp-panel .wa-btn{padding:11px 14px;font-size:11px}
+}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><div class="brand">ECOSTROY</div><nav class="navlinks"><a href="#projects">Проекты</a><a href="#services">Услуги</a><a href="#process">Этапы</a><a href="#contact">Контакты</a></nav><a class="navbtn" href="https://wa.me/77759480649?text=Здравствуйте!%20Хочу%20обсудить%20ремонт%20коммерческого%20помещения.">WhatsApp</a></div></header>
+
+<main>
+<section class="hero"><div class="wrap"><div class="eyebrow">Commercial construction · Almaty</div><h1>Создаём пространства,<br><span>в которых работает бизнес.</span></h1><p class="lead">EcoStroy — ремонт коммерческих помещений под ключ. Магазины, бутики, офисы и другие бизнес-пространства — от идеи до полной сдачи объекта.</p><div class="actions"><a class="btn" href="https://wa.me/77759480649?text=Здравствуйте!%20Хочу%20получить%20консультацию%20EcoStroy.">Получить консультацию</a><a class="btn alt" href="#projects">Смотреть проекты</a></div></div></section>
+
+<section id="about"><div class="wrap">
+<div class="eyebrow">ECOSTROY / APPROACH</div>
+<div style="display:grid;grid-template-columns:1.2fr .8fr;gap:70px;align-items:end;border-top:1px solid #292824;border-bottom:1px solid #292824;padding:55px 0">
+<h2 style="font-size:clamp(35px,5vw,62px);line-height:.98;letter-spacing:-.055em;margin:0">От пустого пространства<br>к готовому бизнесу.</h2>
+<p style="color:#aaa69d;line-height:1.75;margin:0">Берём на себя полный цикл ремонта коммерческого помещения — от подготовки объекта до финальной сдачи. Один подрядчик. Один центр ответственности.</p>
+</div></div></section><section id="projects"><div class="wrap"><div class="section-head"><div><div class="kicker">Portfolio</div><h2 class="title">Проекты, которыми<br>мы гордимся.</h2></div><p class="desc">Реализованные коммерческие пространства — от строительных работ и инженерии до чистовой отделки и финального вида.</p></div><div class="grid">
+<article class="project"><img src="project-1.jpeg" loading="lazy"><div class="cap">Коммерческий объект EcoStroy</div></article><article class="project"><img src="project-2.jpeg" loading="lazy"><div class="cap">Коммерческий объект EcoStroy</div></article><article class="project"><img src="project-3.jpeg" loading="lazy"><div class="cap">Коммерческий объект EcoStroy</div></article><article class="project"><img src="project-4.jpeg" loading="lazy"><div class="cap">Коммерческий объект EcoStroy</div></article><article class="project"><img src="project-5.jpeg" loading="lazy"><div class="cap">Коммерческий объект EcoStroy</div></article><article class="project"><img src="project-6.jpeg" loading="lazy"><div class="cap">Коммерческий объект EcoStroy</div></article><article class="project"><img src="project-7.jpeg" loading="lazy"><div class="cap">Коммерческий объект EcoStroy</div></article><article class="project"><img src="project-8.jpeg" loading="lazy"><div class="cap">Коммерческий объект EcoStroy</div></article><article class="project"><img src="project-9.jpeg" loading="lazy"><div class="cap">Коммерческий объект EcoStroy</div></article><article class="project"><img src="project-10.jpeg" loading="lazy"><div class="cap">Коммерческий объект EcoStroy</div></article><article class="project"><img src="project-11.jpeg" loading="lazy"><div class="cap">Коммерческий объект EcoStroy</div></article><article class="project"><img src="project-12.jpeg" loading="lazy"><div class="cap">Коммерческий объект EcoStroy</div></article><article class="project"><img src="project-13.jpeg" loading="lazy"><div class="cap">Коммерческий объект EcoStroy</div></article><article class="project"><img src="project-14.jpeg" loading="lazy"><div class="cap">Коммерческий объект EcoStroy</div></article>
+</div></div></section>
+
+<section id="services"><div class="wrap"><div class="section-head"><div><div class="kicker">What we do</div><h2 class="title">Всё под одним<br>контролем.</h2></div><p class="desc">Берём на себя весь цикл работ, чтобы вы могли сосредоточиться на запуске и развитии бизнеса.</p></div><div class="services">
+<div class="service"><h3>Ремонт под ключ</h3><p>Полный комплекс строительных и отделочных работ для коммерческих помещений.</p></div>
+<div class="service"><h3>Магазины и бутики</h3><p>Создаём пространства с учётом фирменного стиля, планировки и требований бизнеса.</p></div>
+<div class="service"><h3>Офисы</h3><p>Функциональные рабочие пространства с продуманной инженерией и отделкой.</p></div>
+<div class="service"><h3>Инженерные работы</h3><p>Электрика, освещение, вентиляция и другие необходимые системы объекта.</p></div>
+<div class="service"><h3>Чистовая отделка</h3><p>Материалы, монтаж и детали, которые формируют итоговый уровень пространства.</p></div>
+<div class="service"><h3>Сдача объекта</h3><p>Контролируем качество на каждом этапе и передаём готовое помещение для запуска.</p></div>
+</div></div></section>
+
+<section><div class="wrap"><div class="section-head"><div><div class="kicker">Clients</div><h2 class="title">Работаем с брендами.</h2></div><p class="desc">В портфолио — проекты для известных розничных и коммерческих брендов.</p></div><div class="trust"><div class="pill">MINISO Kazakhstan</div><div class="pill">Madame Coco Kazakhstan</div><div class="pill">Skiny</div><div class="pill">Sun Tea</div><div class="pill">и другие</div></div></div></section>
+
+<section id="process"><div class="wrap"><div class="section-head"><div><div class="kicker">Process</div><h2 class="title">От первого звонка<br>до открытия.</h2></div></div><div class="process">
+<div class="step"><div class="num">01 / ЗАМЕР</div><h3>Изучаем объект</h3><p>Выезжаем на объект, оцениваем состояние и фиксируем задачи.</p></div>
+<div class="step"><div class="num">02 / СМЕТА</div><h3>Формируем решение</h3><p>Согласовываем объём работ, материалы, сроки и бюджет.</p></div>
+<div class="step"><div class="num">03 / РЕМОНТ</div><h3>Реализуем</h3><p>Организуем работы и контролируем выполнение проекта.</p></div>
+<div class="step"><div class="num">04 / СДАЧА</div><h3>Передаём объект</h3><p>Проводим финальный контроль и сдаём готовое пространство.</p></div>
+</div></div></section>
+
+<section id="contact"><div class="wrap"><div class="cta"><div class="kicker">Start a project</div><h2>Есть помещение?<br>Давайте превратим его в бизнес-пространство.</h2><p>Напишите нам в WhatsApp — обсудим ваш объект, задачи и сроки. Предварительная консультация начинается с простого разговора.</p><a class="btn" href="https://wa.me/77759480649?text=Здравствуйте!%20Хочу%20обсудить%20проект%20EcoStroy.">Написать в WhatsApp · +7 775 948 0649</a></div></div></section>
+</main>
+<footer><div class="wrap">© 2026 EcoStroy · Ремонт коммерческих помещений под ключ</div></footer>
+<a class="float" href="https://wa.me/77759480649?text=Здравствуйте!%20Хочу%20получить%20консультацию%20EcoStroy.">Получить консультацию</a>
+
+<a class="whatsapp-panel" href="https://wa.me/77759480649?text=Здравствуйте!%20Хочу%20обсудить%20ремонт%20коммерческого%20помещения%20с%20EcoStroy.">
+  <span class="wa-copy"><span class="wa-title">EcoStroy · WhatsApp</span><span class="wa-text">+7 775 948 0649 · обсудить проект</span></span>
+  <span class="wa-btn">Написать →</span>
+</a>
+</body></html>

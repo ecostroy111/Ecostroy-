@@ -47,6 +47,12 @@ h1,h2,h3{font-family:'Archivo',Arial,sans-serif;margin:0}
 /* ---- header ---- */
 header{position:fixed;top:0;left:0;right:0;z-index:30;background:rgba(22,19,15,.75);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
 .nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+.nav-right{display:flex;align-items:center;gap:16px}
+.lang-switch{display:flex;align-items:center;border:1px solid var(--line);border-radius:2px;overflow:hidden}
+.lang-btn{background:transparent;border:0;color:var(--muted);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;padding:9px 12px;cursor:pointer;border-right:1px solid var(--line);transition:background .2s,color .2s}
+.lang-btn:last-child{border-right:0}
+.lang-btn:hover{color:var(--ink)}
+.lang-btn.is-active{background:linear-gradient(115deg,var(--brass-deep),var(--brass) 60%,#e8c98a);color:#1a1712}
 .brand{font-family:'Archivo',sans-serif;font-weight:800;font-size:20px;letter-spacing:.12em}
 .brand span{background:linear-gradient(115deg,var(--brass-deep),var(--brass) 45%,#e8c98a 60%,var(--brass) 75%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .navlinks{display:flex;gap:32px;font-size:13px;color:#cdc6b8}
@@ -146,6 +152,7 @@ footer{padding:34px 0 120px;color:#77705f;font-size:12.5px;border-top:1px solid 
 
 @media(max-width:900px){
   .navlinks{display:none}
+  .lang-btn{padding:8px 9px;font-size:10px}
   .about-box{grid-template-columns:1fr;gap:24px}
   .grid{grid-template-columns:1fr 1fr}
   .project,.project:nth-child(5n+1){min-height:230px}
@@ -170,9 +177,16 @@ footer{padding:34px 0 120px;color:#77705f;font-size:12.5px;border-top:1px solid 
 <header><div class="wrap nav">
   <div class="brand">ECO<span>·</span>STROY</div>
   <nav class="navlinks">
-    <a href="#projects">Проекты</a><a href="#services">Услуги</a><a href="#process">Этапы</a><a href="#contact">Контакты</a>
+    <a href="#projects" data-i18n="nav.projects">Проекты</a><a href="#services" data-i18n="nav.services">Услуги</a><a href="#process" data-i18n="nav.process">Этапы</a><a href="#contact" data-i18n="nav.contact">Контакты</a>
   </nav>
-  <a class="navbtn" href="https://wa.me/77759480649?text=Здравствуйте!%20Хочу%20обсудить%20ремонт%20коммерческого%20помещения.">WhatsApp</a>
+  <div class="nav-right">
+    <div class="lang-switch" role="group" aria-label="Язык сайта">
+      <button type="button" class="lang-btn is-active" data-lang="ru">RU</button>
+      <button type="button" class="lang-btn" data-lang="kz">KZ</button>
+      <button type="button" class="lang-btn" data-lang="zh">中文</button>
+    </div>
+    <a class="navbtn" href="https://wa.me/77759480649?text=Здравствуйте!%20Хочу%20обсудить%20ремонт%20коммерческого%20помещения.">WhatsApp</a>
+  </div>
 </div></header>
 
 <main>
@@ -181,12 +195,12 @@ footer{padding:34px 0 120px;color:#77705f;font-size:12.5px;border-top:1px solid 
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
   <div class="wrap">
-    <div class="dim-label eyebrow">Commercial fit-out · Алматы</div>
-    <h1>Создаём пространства,<br><em>в которых работает бизнес.</em></h1>
-    <p class="lead">EcoStroy — ремонт коммерческих помещений под ключ. Магазины, бутики, офисы и другие бизнес-пространства — от замера до сдачи объекта.</p>
+    <div class="dim-label eyebrow" data-i18n="hero.eyebrow">Commercial fit-out · Алматы</div>
+    <h1 data-i18n="hero.h1">Создаём пространства,<br><em>в которых работает бизнес.</em></h1>
+    <p class="lead" data-i18n="hero.lead">EcoStroy — ремонт коммерческих помещений под ключ. Магазины, бутики, офисы и другие бизнес-пространства — от замера до сдачи объекта.</p>
     <div class="actions">
-      <a class="btn" href="https://wa.me/77759480649?text=Здравствуйте!%20Хочу%20получить%20консультацию%20EcoStroy.">Получить консультацию</a>
-      <a class="btn alt" href="#projects">Смотреть проекты</a>
+      <a class="btn" href="https://wa.me/77759480649?text=Здравствуйте!%20Хочу%20получить%20консультацию%20EcoStroy." data-i18n="hero.btn1">Получить консультацию</a>
+      <a class="btn alt" href="#projects" data-i18n="hero.btn2">Смотреть проекты</a>
     </div>
   </div>
 </section>
@@ -194,15 +208,15 @@ footer{padding:34px 0 120px;color:#77705f;font-size:12.5px;border-top:1px solid 
 <section id="about"><div class="wrap">
   <div class="dim-label">EcoStroy / Approach</div>
   <div class="about-box">
-    <h2>От пустого пространства<br>к готовому бизнесу.</h2>
-    <p>Берём на себя полный цикл ремонта коммерческого помещения — от подготовки объекта до финальной сдачи. Один подрядчик, одна смета, один центр ответственности на всех этапах.</p>
+    <h2 data-i18n="about.h2">От пустого пространства<br>к готовому бизнесу.</h2>
+    <p data-i18n="about.p">Берём на себя полный цикл ремонта коммерческого помещения — от подготовки объекта до финальной сдачи. Один подрядчик, одна смета, один центр ответственности на всех этапах.</p>
   </div>
 </div></section>
 
 <section id="projects"><div class="wrap">
   <div class="section-head">
-    <div><div class="dim-label">Portfolio</div><h2 class="title">Проекты, которыми<br>мы гордимся.</h2></div>
-    <p class="desc">Реализованные коммерческие пространства — от строительных работ и инженерии до чистовой отделки и финального вида.</p>
+    <div><div class="dim-label">Portfolio</div><h2 class="title" data-i18n="projects.title">Проекты, которыми<br>мы гордимся.</h2></div>
+    <p class="desc" data-i18n="projects.desc">Реализованные коммерческие пространства — от строительных работ и инженерии до чистовой отделки и финального вида.</p>
   </div>
   <div class="grid">
     <article class="project"><img src="project-1.jpeg" alt="Коммерческий объект EcoStroy — розница" loading="lazy"><div class="cap"><span class="dim-label">01 / Retail</span><span class="cap-title">Ремонт под ключ · Алматы</span></div></article>
@@ -224,56 +238,139 @@ footer{padding:34px 0 120px;color:#77705f;font-size:12.5px;border-top:1px solid 
 
 <section id="services"><div class="wrap">
   <div class="section-head">
-    <div><div class="dim-label">What we do</div><h2 class="title">Всё под одним<br>контролем.</h2></div>
-    <p class="desc">Берём на себя весь цикл работ, чтобы вы могли сосредоточиться на запуске и развитии бизнеса.</p>
+    <div><div class="dim-label">What we do</div><h2 class="title" data-i18n="services.title">Всё под одним<br>контролем.</h2></div>
+    <p class="desc" data-i18n="services.desc">Берём на себя весь цикл работ, чтобы вы могли сосредоточиться на запуске и развитии бизнеса.</p>
   </div>
   <div class="services">
-    <div class="service"><div class="idx mono">01</div><div><h3>Ремонт под ключ</h3><p>Полный комплекс строительных и отделочных работ для коммерческих помещений.</p></div></div>
-    <div class="service"><div class="idx mono">02</div><div><h3>Магазины и бутики</h3><p>Создаём пространства с учётом фирменного стиля, планировки и требований бизнеса.</p></div></div>
-    <div class="service"><div class="idx mono">03</div><div><h3>Офисы</h3><p>Функциональные рабочие пространства с продуманной инженерией и отделкой.</p></div></div>
-    <div class="service"><div class="idx mono">04</div><div><h3>Инженерные работы</h3><p>Электрика, освещение, вентиляция и другие необходимые системы объекта.</p></div></div>
-    <div class="service"><div class="idx mono">05</div><div><h3>Чистовая отделка</h3><p>Материалы, монтаж и детали, которые формируют итоговый уровень пространства.</p></div></div>
-    <div class="service"><div class="idx mono">06</div><div><h3>Сдача объекта</h3><p>Контролируем качество на каждом этапе и передаём готовое помещение для запуска.</p></div></div>
+    <div class="service"><div class="idx mono">01</div><div><h3 data-i18n="service.1.h">Ремонт под ключ</h3><p data-i18n="service.1.p">Полный комплекс строительных и отделочных работ для коммерческих помещений.</p></div></div>
+    <div class="service"><div class="idx mono">02</div><div><h3 data-i18n="service.2.h">Магазины и бутики</h3><p data-i18n="service.2.p">Создаём пространства с учётом фирменного стиля, планировки и требований бизнеса.</p></div></div>
+    <div class="service"><div class="idx mono">03</div><div><h3 data-i18n="service.3.h">Офисы</h3><p data-i18n="service.3.p">Функциональные рабочие пространства с продуманной инженерией и отделкой.</p></div></div>
+    <div class="service"><div class="idx mono">04</div><div><h3 data-i18n="service.4.h">Инженерные работы</h3><p data-i18n="service.4.p">Электрика, освещение, вентиляция и другие необходимые системы объекта.</p></div></div>
+    <div class="service"><div class="idx mono">05</div><div><h3 data-i18n="service.5.h">Чистовая отделка</h3><p data-i18n="service.5.p">Материалы, монтаж и детали, которые формируют итоговый уровень пространства.</p></div></div>
+    <div class="service"><div class="idx mono">06</div><div><h3 data-i18n="service.6.h">Сдача объекта</h3><p data-i18n="service.6.p">Контролируем качество на каждом этапе и передаём готовое помещение для запуска.</p></div></div>
   </div>
 </div></section>
 
 <section><div class="wrap">
   <div class="dim-label" style="margin-bottom:22px">Clients</div>
   <div class="trust-row">
-    <span>MINISO Kazakhstan</span><span>Madame Coco Kazakhstan</span><span>Skiny</span><span>Sun Tea</span><span>и другие бренды</span>
+    <span>MINISO Kazakhstan</span><span>Madame Coco Kazakhstan</span><span>Skiny</span><span>Sun Tea</span><span data-i18n="clients.other">и другие бренды</span>
   </div>
 </div></section>
 
 <section id="process"><div class="wrap">
   <div class="section-head">
-    <div><div class="dim-label">Process</div><h2 class="title">От первого звонка<br>до открытия.</h2></div>
+    <div><div class="dim-label">Process</div><h2 class="title" data-i18n="process.title">От первого звонка<br>до открытия.</h2></div>
   </div>
   <div class="process-line"></div>
   <div class="process">
-    <div class="step"><div class="num dim-label">01 / Замер</div><h3>Изучаем объект</h3><p>Выезжаем на объект, оцениваем состояние и фиксируем задачи.</p></div>
-    <div class="step"><div class="num dim-label">02 / Смета</div><h3>Формируем решение</h3><p>Согласовываем объём работ, материалы, сроки и бюджет.</p></div>
-    <div class="step"><div class="num dim-label">03 / Ремонт</div><h3>Реализуем</h3><p>Организуем работы и контролируем выполнение проекта.</p></div>
-    <div class="step"><div class="num dim-label">04 / Сдача</div><h3>Передаём объект</h3><p>Проводим финальный контроль и сдаём готовое пространство.</p></div>
+    <div class="step"><div class="num dim-label" data-i18n="process.1.num">01 / Замер</div><h3 data-i18n="process.1.h">Изучаем объект</h3><p data-i18n="process.1.p">Выезжаем на объект, оцениваем состояние и фиксируем задачи.</p></div>
+    <div class="step"><div class="num dim-label" data-i18n="process.2.num">02 / Смета</div><h3 data-i18n="process.2.h">Формируем решение</h3><p data-i18n="process.2.p">Согласовываем объём работ, материалы, сроки и бюджет.</p></div>
+    <div class="step"><div class="num dim-label" data-i18n="process.3.num">03 / Ремонт</div><h3 data-i18n="process.3.h">Реализуем</h3><p data-i18n="process.3.p">Организуем работы и контролируем выполнение проекта.</p></div>
+    <div class="step"><div class="num dim-label" data-i18n="process.4.num">04 / Сдача</div><h3 data-i18n="process.4.h">Передаём объект</h3><p data-i18n="process.4.p">Проводим финальный контроль и сдаём готовое пространство.</p></div>
   </div>
 </div></section>
 
 <section id="contact"><div class="wrap">
   <div class="cta">
     <div class="dim-label">Start a project</div>
-    <h2>Есть помещение?<br>Давайте превратим его в бизнес-пространство.</h2>
-    <p>Напишите нам в WhatsApp — обсудим ваш объект, задачи и сроки. Предварительная консультация начинается с простого разговора.</p>
-    <a class="btn" href="https://wa.me/77759480649?text=Здравствуйте!%20Хочу%20обсудить%20проект%20EcoStroy.">Написать в WhatsApp · +7 775 948 0649</a>
+    <h2 data-i18n="cta.h2">Есть помещение?<br>Давайте превратим его в бизнес-пространство.</h2>
+    <p data-i18n="cta.p">Напишите нам в WhatsApp — обсудим ваш объект, задачи и сроки. Предварительная консультация начинается с простого разговора.</p>
+    <a class="btn" href="https://wa.me/77759480649?text=Здравствуйте!%20Хочу%20обсудить%20проект%20EcoStroy." data-i18n="cta.btn">Написать в WhatsApp · +7 775 948 0649</a>
   </div>
 </div></section>
 
 </main>
 
-<footer><div class="wrap">© 2026 EcoStroy · Ремонт коммерческих помещений под ключ · Алматы</div></footer>
+<footer><div class="wrap" data-i18n="footer.text">© 2026 EcoStroy · Ремонт коммерческих помещений под ключ · Алматы</div></footer>
 
 <a class="wa-panel" href="https://wa.me/77759480649?text=Здравствуйте!%20Хочу%20обсудить%20ремонт%20коммерческого%20помещения%20с%20EcoStroy.">
-  <span class="wa-copy"><span class="wa-title">EcoStroy · WhatsApp</span><span class="wa-text">+7 775 948 0649 · обсудить проект</span></span>
-  <span class="wa-btn">Написать →</span>
+  <span class="wa-copy"><span class="wa-title">EcoStroy · WhatsApp</span><span class="wa-text" data-i18n="wa.text">+7 775 948 0649 · обсудить проект</span></span>
+  <span class="wa-btn" data-i18n="wa.btn">Написать →</span>
 </a>
+
+<script>
+const translations = {
+  ru: {},
+  kz: {
+    "nav.projects":"Жобалар","nav.services":"Қызметтер","nav.process":"Кезеңдер","nav.contact":"Байланыс",
+    "hero.eyebrow":"Коммерциялық жөндеу · Алматы",
+    "hero.h1":"Бизнес жұмыс істейтін<br><em>кеңістіктер жасаймыз.</em>",
+    "hero.lead":"EcoStroy — коммерциялық үй-жайларды кілт тапсыру форматында жөндеу. Дүкендер, бутиктер, кеңселер және басқа да бизнес-кеңістіктер — өлшеуден бастап объектіні тапсыруға дейін.",
+    "hero.btn1":"Кеңес алу","hero.btn2":"Жобаларды көру",
+    "about.h2":"Бос кеңістіктен<br>дайын бизнеске дейін.",
+    "about.p":"Коммерциялық үй-жайды жөндеудің толық циклін өз мойнымызға аламыз — объектіні дайындаудан бастап, соңғы тапсыруға дейін. Бір мердігер, бір смета, барлық кезеңде бір жауапкершілік орталығы.",
+    "projects.title":"Біз мақтан тұтатын<br>жобалар.",
+    "projects.desc":"Іске асырылған коммерциялық кеңістіктер — құрылыс және инженерлік жұмыстардан бастап әрлеу мен түпкі көрінісіне дейін.",
+    "services.title":"Бәрі бір<br>бақылауда.",
+    "services.desc":"Сіз бизнесті іске қосу мен дамытуға назар аудара алуыңыз үшін жұмыстың барлық циклін өз мойнымызға аламыз.",
+    "service.1.h":"Кілт тапсыру жөндеуі","service.1.p":"Коммерциялық үй-жайлар үшін құрылыс және әрлеу жұмыстарының толық кешені.",
+    "service.2.h":"Дүкендер мен бутиктер","service.2.p":"Фирмалық стильді, жоспарлауды және бизнес талаптарын ескере отырып кеңістіктер жасаймыз.",
+    "service.3.h":"Кеңселер","service.3.p":"Ойластырылған инженерлік жүйелер мен әрлеуі бар функционалды жұмыс кеңістіктері.",
+    "service.4.h":"Инженерлік жұмыстар","service.4.p":"Электрмен жабдықтау, жарықтандыру, желдету және объектіге қажетті басқа да жүйелер.",
+    "service.5.h":"Соңғы әрлеу","service.5.p":"Кеңістіктің түпкі деңгейін қалыптастыратын материалдар, монтаж және детальдар.",
+    "service.6.h":"Объектіні тапсыру","service.6.p":"Әр кезеңде сапаны бақылап, дайын үй-жайды іске қосуға тапсырамыз.",
+    "clients.other":"және басқа да брендтер",
+    "process.title":"Алғашқы қоңыраудан<br>ашылуға дейін.",
+    "process.1.num":"01 / Өлшеу","process.1.h":"Объектіні зерттейміз","process.1.p":"Объектіге барып, жағдайын бағалап, міндеттерді белгілейміз.",
+    "process.2.num":"02 / Смета","process.2.h":"Шешім қалыптастырамыз","process.2.p":"Жұмыс көлемін, материалдарды, мерзімдер мен бюджетті келісеміз.",
+    "process.3.num":"03 / Жөндеу","process.3.h":"Іске асырамыз","process.3.p":"Жұмыстарды ұйымдастырып, жобаның орындалуын бақылаймыз.",
+    "process.4.num":"04 / Тапсыру","process.4.h":"Объектіні тапсырамыз","process.4.p":"Соңғы бақылауды жүргіземіз және дайын кеңістікті тапсырамыз.",
+    "cta.h2":"Үй-жайыңыз бар ма?<br>Оны бизнес-кеңістігіне айналдырайық.",
+    "cta.p":"Бізге WhatsApp арқылы жазыңыз — объектіңізді, міндеттер мен мерзімдерді талқылаймыз. Алдын ала кеңес қарапайым әңгімеден басталады.",
+    "cta.btn":"WhatsApp-қа жазу · +7 775 948 0649",
+    "footer.text":"© 2026 EcoStroy · Коммерциялық үй-жайларды кілт тапсыру форматында жөндеу · Алматы",
+    "wa.text":"+7 775 948 0649 · жобаны талқылау","wa.btn":"Жазу →"
+  },
+  zh: {
+    "nav.projects":"项目","nav.services":"服务","nav.process":"流程","nav.contact":"联系方式",
+    "hero.eyebrow":"商业装修 · 阿拉木图",
+    "hero.h1":"打造让生意<br><em>真正运转起来的空间。</em>",
+    "hero.lead":"EcoStroy 提供商业空间的一站式整体装修服务。从测量到交付,涵盖商铺、精品店、办公室等各类商业空间。",
+    "hero.btn1":"获取咨询","hero.btn2":"查看项目",
+    "about.h2":"从空置空间<br>到落地经营。",
+    "about.p":"我们承担商业空间装修的全流程工作——从前期准备到最终交付。一个承包商、一份预算、全程唯一责任方。",
+    "projects.title":"我们引以为豪<br>的项目。",
+    "projects.desc":"已完成的商业空间——涵盖土建、机电工程到精装修与最终呈现效果。",
+    "services.title":"一切尽在<br>掌控之中。",
+    "services.desc":"我们负责全部工程流程,让您专注于业务的开业与发展。",
+    "service.1.h":"一站式整体装修","service.1.p":"为商业空间提供全套建筑与装修工程服务。",
+    "service.2.h":"商铺与精品店","service.2.p":"根据品牌形象、空间布局与业务需求打造专属空间。",
+    "service.3.h":"办公空间","service.3.p":"配备完善机电系统与精细装修的功能性办公空间。",
+    "service.4.h":"机电工程","service.4.p":"电气、照明、通风等空间所需的各类系统工程。",
+    "service.5.h":"精装修","service.5.p":"精选材料、安装工艺与细节处理,决定空间的最终品质。",
+    "service.6.h":"项目交付","service.6.p":"全程质量把控,交付可直接投入使用的成品空间。",
+    "clients.other":"及更多品牌",
+    "process.title":"从第一通电话<br>到正式开业。",
+    "process.1.num":"01 / 测量","process.1.h":"现场勘察","process.1.p":"实地考察项目现场,评估现状并明确任务。",
+    "process.2.num":"02 / 预算","process.2.h":"制定方案","process.2.p":"确认工程量、材料、工期与预算。",
+    "process.3.num":"03 / 施工","process.3.h":"组织实施","process.3.p":"统筹安排施工,全程监督项目进度与质量。",
+    "process.4.num":"04 / 交付","process.4.h":"项目交付","process.4.p":"进行最终验收,交付完工空间。",
+    "cta.h2":"已有场地?<br>让我们把它打造成理想的商业空间。",
+    "cta.p":"通过 WhatsApp 联系我们——一起沟通您的项目需求与时间安排。前期咨询,从一次简单的对话开始。",
+    "cta.btn":"发送 WhatsApp 消息 · +7 775 948 0649",
+    "footer.text":"© 2026 EcoStroy · 商业空间一站式整体装修 · 阿拉木图",
+    "wa.text":"+7 775 948 0649 · 沟通项目","wa.btn":"发送 →"
+  }
+};
+
+const nodes = document.querySelectorAll('[data-i18n]');
+nodes.forEach(el => { el.dataset.i18nRu = el.innerHTML; });
+
+document.querySelectorAll('.lang-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const lang = btn.dataset.lang;
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('is-active', b === btn));
+    document.documentElement.lang = lang === 'zh' ? 'zh' : (lang === 'kz' ? 'kk' : 'ru');
+    nodes.forEach(el => {
+      const key = el.dataset.i18n;
+      if (lang === 'ru') { el.innerHTML = el.dataset.i18nRu; return; }
+      const dict = translations[lang] || {};
+      if (dict[key]) el.innerHTML = dict[key];
+    });
+  });
+});
+</script>
 
 </body>
 </html>

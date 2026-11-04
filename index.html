@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>EcoStroy — ремонт коммерческих помещений под ключ</title>
-<meta name="description" content="EcoStroy — ремонт коммерческих помещений под ключ в Алматы. Магазины, бутики, офисы и коммерческие пространства.">
+<meta name="description" content="EcoStroy — ремонт коммерческих помещений под ключ по всему Казахстану. Магазины, бутики, офисы и коммерческие пространства.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -170,6 +170,20 @@ footer{padding:34px 0 120px;color:#77705f;font-size:12.5px;border-top:1px solid 
   .trust-row span{padding:16px 18px;font-size:12px}
   .wrap{padding:0 18px}
 }
+
+/* ---- фоновые картинки за секциями ---- */
+#clients,#about,#services,#process,#contact{position:relative;overflow:hidden}
+#clients>.wrap,#about>.wrap,#services>.wrap,#process>.wrap,#contact>.wrap{position:relative;z-index:2}
+#clients::before,#about::before,#services::before,#process::before,#contact::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:
+    linear-gradient(180deg,var(--bg) 0,rgba(16,13,9,0) 22%,rgba(16,13,9,0) 78%,var(--bg) 100%),
+    linear-gradient(rgba(16,13,9,.86),rgba(16,13,9,.92)),
+    var(--sec-img) center/cover no-repeat}
+#clients{--sec-img:url("project-8.jpeg")}
+#about{--sec-img:url("project-5.jpeg")}
+#services{--sec-img:url("project-3.jpeg")}
+#process{--sec-img:url("project-10.jpeg")}
+#contact{--sec-img:url("project-13.jpeg")}
 </style>
 </head>
 <body>
@@ -185,7 +199,7 @@ footer{padding:34px 0 120px;color:#77705f;font-size:12.5px;border-top:1px solid 
       <button type="button" class="lang-btn" data-lang="kz">KZ</button>
       <button type="button" class="lang-btn" data-lang="zh">中文</button>
     </div>
-    <a class="navbtn" href="https://wa.me/77759480649?text=Здравствуйте!%20Хочу%20обсудить%20ремонт%20коммерческого%20помещения.">WhatsApp</a>
+    <a class="navbtn" href="https://wa.me/77066001550?text=Здравствуйте!%20Хочу%20обсудить%20ремонт%20коммерческого%20помещения.">WhatsApp</a>
   </div>
 </div></header>
 
@@ -195,15 +209,22 @@ footer{padding:34px 0 120px;color:#77705f;font-size:12.5px;border-top:1px solid 
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
   <div class="wrap">
-    <div class="dim-label eyebrow" data-i18n="hero.eyebrow">Commercial fit-out · Алматы</div>
+    <div class="dim-label eyebrow" data-i18n="hero.eyebrow">Commercial fit-out · Казахстан</div>
     <h1 data-i18n="hero.h1">Создаём пространства,<br><em>в которых работает бизнес.</em></h1>
-    <p class="lead" data-i18n="hero.lead">EcoStroy — ремонт коммерческих помещений под ключ. Магазины, бутики, офисы и другие бизнес-пространства — от замера до сдачи объекта.</p>
+    <p class="lead" data-i18n="hero.lead">EcoStroy — ремонт коммерческих помещений под ключ. Магазины, бутики, офисы и другие бизнес-пространства — от замера до сдачи объекта. Работаем по всему Казахстану.</p>
     <div class="actions">
-      <a class="btn" href="https://wa.me/77759480649?text=Здравствуйте!%20Хочу%20получить%20консультацию%20EcoStroy." data-i18n="hero.btn1">Получить консультацию</a>
+      <a class="btn" href="https://wa.me/77066001550?text=Здравствуйте!%20Хочу%20получить%20консультацию%20EcoStroy." data-i18n="hero.btn1">Получить консультацию</a>
       <a class="btn alt" href="#projects" data-i18n="hero.btn2">Смотреть проекты</a>
     </div>
   </div>
 </section>
+
+<section id="clients"><div class="wrap">
+  <div class="dim-label" style="margin-bottom:22px">Clients</div>
+  <div class="trust-row">
+    <span>MINISO Kazakhstan</span><span>Madame Coco Kazakhstan</span><span>Skiny</span><span>Sun Tea</span><span data-i18n="clients.other">и другие бренды</span>
+  </div>
+</div></section>
 
 <section id="about"><div class="wrap">
   <div class="dim-label">EcoStroy / Approach</div>
@@ -251,13 +272,6 @@ footer{padding:34px 0 120px;color:#77705f;font-size:12.5px;border-top:1px solid 
   </div>
 </div></section>
 
-<section><div class="wrap">
-  <div class="dim-label" style="margin-bottom:22px">Clients</div>
-  <div class="trust-row">
-    <span>MINISO Kazakhstan</span><span>Madame Coco Kazakhstan</span><span>Skiny</span><span>Sun Tea</span><span data-i18n="clients.other">и другие бренды</span>
-  </div>
-</div></section>
-
 <section id="process"><div class="wrap">
   <div class="section-head">
     <div><div class="dim-label">Process</div><h2 class="title" data-i18n="process.title">От первого звонка<br>до открытия.</h2></div>
@@ -276,16 +290,16 @@ footer{padding:34px 0 120px;color:#77705f;font-size:12.5px;border-top:1px solid 
     <div class="dim-label">Start a project</div>
     <h2 data-i18n="cta.h2">Есть помещение?<br>Давайте превратим его в бизнес-пространство.</h2>
     <p data-i18n="cta.p">Напишите нам в WhatsApp — обсудим ваш объект, задачи и сроки. Предварительная консультация начинается с простого разговора.</p>
-    <a class="btn" href="https://wa.me/77759480649?text=Здравствуйте!%20Хочу%20обсудить%20проект%20EcoStroy." data-i18n="cta.btn">Написать в WhatsApp · +7 775 948 0649</a>
+    <a class="btn" href="https://wa.me/77066001550?text=Здравствуйте!%20Хочу%20обсудить%20проект%20EcoStroy." data-i18n="cta.btn">Написать в WhatsApp · +7 706 600 1550</a>
   </div>
 </div></section>
 
 </main>
 
-<footer><div class="wrap" data-i18n="footer.text">© 2026 EcoStroy · Ремонт коммерческих помещений под ключ · Алматы</div></footer>
+<footer><div class="wrap" data-i18n="footer.text">© 2026 EcoStroy · Ремонт коммерческих помещений под ключ · Работаем по всему Казахстану</div></footer>
 
-<a class="wa-panel" href="https://wa.me/77759480649?text=Здравствуйте!%20Хочу%20обсудить%20ремонт%20коммерческого%20помещения%20с%20EcoStroy.">
-  <span class="wa-copy"><span class="wa-title">EcoStroy · WhatsApp</span><span class="wa-text" data-i18n="wa.text">+7 775 948 0649 · обсудить проект</span></span>
+<a class="wa-panel" href="https://wa.me/77066001550?text=Здравствуйте!%20Хочу%20обсудить%20ремонт%20коммерческого%20помещения%20с%20EcoStroy.">
+  <span class="wa-copy"><span class="wa-title">EcoStroy · WhatsApp</span><span class="wa-text" data-i18n="wa.text">+7 706 600 1550 · обсудить проект</span></span>
   <span class="wa-btn" data-i18n="wa.btn">Написать →</span>
 </a>
 
@@ -294,9 +308,9 @@ const translations = {
   ru: {},
   kz: {
     "nav.projects":"Жобалар","nav.services":"Қызметтер","nav.process":"Кезеңдер","nav.contact":"Байланыс",
-    "hero.eyebrow":"Коммерциялық жөндеу · Алматы",
+    "hero.eyebrow":"Коммерциялық жөндеу · Қазақстан",
     "hero.h1":"Бизнес жұмыс істейтін<br><em>кеңістіктер жасаймыз.</em>",
-    "hero.lead":"EcoStroy — коммерциялық үй-жайларды кілт тапсыру форматында жөндеу. Дүкендер, бутиктер, кеңселер және басқа да бизнес-кеңістіктер — өлшеуден бастап объектіні тапсыруға дейін.",
+    "hero.lead":"EcoStroy — коммерциялық үй-жайларды кілт тапсыру форматында жөндеу. Дүкендер, бутиктер, кеңселер және басқа да бизнес-кеңістіктер — өлшеуден бастап объектіні тапсыруға дейін. Бүкіл Қазақстан бойынша жұмыс істейміз.",
     "hero.btn1":"Кеңес алу","hero.btn2":"Жобаларды көру",
     "about.h2":"Бос кеңістіктен<br>дайын бизнеске дейін.",
     "about.p":"Коммерциялық үй-жайды жөндеудің толық циклін өз мойнымызға аламыз — объектіні дайындаудан бастап, соңғы тапсыруға дейін. Бір мердігер, бір смета, барлық кезеңде бір жауапкершілік орталығы.",
@@ -318,15 +332,15 @@ const translations = {
     "process.4.num":"04 / Тапсыру","process.4.h":"Объектіні тапсырамыз","process.4.p":"Соңғы бақылауды жүргіземіз және дайын кеңістікті тапсырамыз.",
     "cta.h2":"Үй-жайыңыз бар ма?<br>Оны бизнес-кеңістігіне айналдырайық.",
     "cta.p":"Бізге WhatsApp арқылы жазыңыз — объектіңізді, міндеттер мен мерзімдерді талқылаймыз. Алдын ала кеңес қарапайым әңгімеден басталады.",
-    "cta.btn":"WhatsApp-қа жазу · +7 775 948 0649",
-    "footer.text":"© 2026 EcoStroy · Коммерциялық үй-жайларды кілт тапсыру форматында жөндеу · Алматы",
-    "wa.text":"+7 775 948 0649 · жобаны талқылау","wa.btn":"Жазу →"
+    "cta.btn":"WhatsApp-қа жазу · +7 706 600 1550",
+    "footer.text":"© 2026 EcoStroy · Коммерциялық үй-жайларды кілт тапсыру форматында жөндеу · Бүкіл Қазақстан бойынша",
+    "wa.text":"+7 706 600 1550 · жобаны талқылау","wa.btn":"Жазу →"
   },
   zh: {
     "nav.projects":"项目","nav.services":"服务","nav.process":"流程","nav.contact":"联系方式",
-    "hero.eyebrow":"商业装修 · 阿拉木图",
+    "hero.eyebrow":"商业装修 · 哈萨克斯坦",
     "hero.h1":"打造让生意<br><em>真正运转起来的空间。</em>",
-    "hero.lead":"EcoStroy 提供商业空间的一站式整体装修服务。从测量到交付,涵盖商铺、精品店、办公室等各类商业空间。",
+    "hero.lead":"EcoStroy 提供商业空间的一站式整体装修服务。从测量到交付,涵盖商铺、精品店、办公室等各类商业空间。服务覆盖哈萨克斯坦全境。",
     "hero.btn1":"获取咨询","hero.btn2":"查看项目",
     "about.h2":"从空置空间<br>到落地经营。",
     "about.p":"我们承担商业空间装修的全流程工作——从前期准备到最终交付。一个承包商、一份预算、全程唯一责任方。",
@@ -348,9 +362,9 @@ const translations = {
     "process.4.num":"04 / 交付","process.4.h":"项目交付","process.4.p":"进行最终验收,交付完工空间。",
     "cta.h2":"已有场地?<br>让我们把它打造成理想的商业空间。",
     "cta.p":"通过 WhatsApp 联系我们——一起沟通您的项目需求与时间安排。前期咨询,从一次简单的对话开始。",
-    "cta.btn":"发送 WhatsApp 消息 · +7 775 948 0649",
-    "footer.text":"© 2026 EcoStroy · 商业空间一站式整体装修 · 阿拉木图",
-    "wa.text":"+7 775 948 0649 · 沟通项目","wa.btn":"发送 →"
+    "cta.btn":"发送 WhatsApp 消息 · +7 706 600 1550",
+    "footer.text":"© 2026 EcoStroy · 商业空间一站式整体装修 · 服务覆盖哈萨克斯坦全境",
+    "wa.text":"+7 706 600 1550 · 沟通项目","wa.btn":"发送 →"
   }
 };
 
